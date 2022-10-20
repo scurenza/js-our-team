@@ -12,6 +12,12 @@ Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto. *
 // BONUS 2:
 // Organizzare i singoli membri in card/schede. Se non vi sentite particolarmente creativi, potete prendere uno spunto dallo screenshot allegato.
 
+
+// Dati
+const firstRow = document.getElementById("firstRow");
+const secondRow = document.getElementById("secondRow");
+
+
 // Array
 const teamArray = [
     {
@@ -46,6 +52,32 @@ const teamArray = [
     }
 ];
 
-for (let key in teamArray) {
-    console.log(teamArray[key]);
+for (let i = 0; i < 3; i++) {
+    const thisMember = teamArray[i];
+    firstRow.innerHTML += `
+    <div class="card">
+        <div class="card-img">
+            <img src="img/${thisMember.pic}" alt="" />
+        </div>
+        <div class="card-text">
+            <h3>Name: ${thisMember.name}</h3>
+            <h4>Role: ${thisMember.role}</h4>
+        </div>
+  </div>
+    `
+}
+
+for (let i = 3; i < teamArray.length; i++) {
+    const thisMember = teamArray[i];
+    firstRow.innerHTML += `
+    <div class="card">
+        <div class="card-img">
+            <img src="img/${thisMember.pic}" alt="" />
+        </div>
+        <div class="card-text">
+            <h3>Name: ${thisMember.name}</h3>
+            <h4>Role: ${thisMember.role}</h4>
+        </div>
+    </div>
+    `
 }
