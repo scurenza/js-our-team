@@ -69,7 +69,7 @@ for (let i = 0; i < 3; i++) {
 
 for (let i = 3; i < teamArray.length; i++) {
     const thisMember = teamArray[i];
-    firstRow.innerHTML += `
+    secondRow.innerHTML += `
     <div class="card">
         <div class="card-img">
             <img src="img/${thisMember.pic}" alt="" />
